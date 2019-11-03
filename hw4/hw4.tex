@@ -1,0 +1,284 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Homework 4}
+\author{Yifan}
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+%\setcounter{section}{1}
+
+\begin{center}
+{\large Homework 4} \\
+\vspace{.2in}
+Yifan Liu
+\end{center}
+
+\bigskip \bigskip
+
+% \section{Chapter 1}
+
+\textbf{Exercise 1.7.18} Show that \(f^{-1} \circ f=I_{A}\) and \(f \circ f^{-1}=I_{B}\)
+\begin{proof}
+% \(f^{-1} \circ f=I_{A}\):\\
+Given $f^{-1}$ exists, then $\forall a \in A, \exists b \in B$ s.t. $f(a)=b$ and $f^{-1}(b)=a$. Therefore, $\forall a \in A, (f^{-1} \circ f)(a)=f^{-1} (f(a)) = f^{-1}(b) = a$, which implies that \(f^{-1} \circ f=I_{A}\). In the same way, $\forall b \in B, (f \circ f^{-1})(b)=f (f^{-1}(b)) = f^{-1}(a) = b$, in other words, \(f \circ f^{-1}=I_{B}\).
+\end{proof}
+
+\textbf{Exercise 1.7.19} Suppose \(A, B,\) and \(C\) are sets and \(f: A \rightarrow B\) and \(g: B \rightarrow\)\(C\) are bijections. Show that \(g \circ f\) is a bijection. Compute \((g \circ f)^{-1}: C \rightarrow A\).
+\begin{proof}
+$\forall a \in A, \exists b \in B$ s.t. $f(a)=b$, and $\forall b \in B, \exists c \in C$ s.t. $g(b)=c$. So $g \circ f: A\rightarrow C$ is such that $(g\circ f)(a)=c$.
+
+
+Injective:
+If $(g\circ f)(a)=(g\circ f)(a')=c$, then $g(f(a))=g(f(a'))=c$. Let $b=g^{-1}(c)$, which is unique in $B$. Then $g(f(a))=g(f(a'))=g(b)=c$, so $f(a)=f(a')=b$. Because $f$ is bijective, we have $a=a'$.
+
+Surjective:
+$\forall c \in C$, because there is a bijective $g$, $\exists b \in B$ such that $g(b)=c$. Meanwhile, because $f$ is bijective, $\exists a \in A$ such that $f(a)=b$. So for any $c$, there is such an $a$ that $(g\circ f)(a)=c$.
+
+Hence, $g\circ f$ is bijective.
+
+Therefore, if $(g\circ f)(a)=c$ and $(g\circ f)^{-1}(c)=a$, then $\exists b \in B$ such that  $(a, b) \in f \text { and }(b, c) \in g \text { and } (b, a) \in f^{-1} \text { and }(c, b) \in g^{-1}$. Hence,
+$$(g\circ f)^{-1}(c)=a=f^{-1}(b)=f^{-1}(g^{-1}(c))=(f^{-1}\circ g^{-1})(c)$$
+In other words, $(g \circ f)^{-1}=f^{-1} \circ g^{-1}$
+% $$
+% \begin{aligned}(g \circ f)^{-1} &=\{(c, a): \exists b \in B \text{ s.t. }(a, b) \in f \text { and }(b, c) \in g\} \\ &=\left\{(c, a): \exists b \in B \text{ s.t. }(b, a) \in f^{-1} \text { and }(c, b) \in g^{-1}\right\} \\ &=f^{-1} \circ g^{-1} \end{aligned}
+% $$
+\end{proof}
+
+\textbf{Exercise 1.7.22} Define \(f: \mathbb{N} \rightarrow \mathbb{Z}\) by
+$$
+f(n)=\left\{\begin{array}{ll}{\frac{n}{2},} & {\text { if } n \text { is even }} \\ {\frac{1-n}{2},} & {\text { if } n \text { is odd. }}\end{array}\right.
+$$
+Show that \(f\) is a bijection.
+\begin{proof}
+Injective:\\
+If $f(a)=f(a')=m$, then:
+
+If $m>0$, then $a$ and $a'$ must be even. This is because if $a \in \bbN$ (which implies that $a>0$) is odd, then $f(a) = \frac{1-a}{2} <0 $. The same is for $a'$. Therefore, $f(a)=f(a') \implies \frac{a}{2} = \frac{a'}{2} \implies a=a'$.
+
+If $m\leq0$, then $a$ and $a'$ must be odd. This is because if $a \in \bbN$ (which implies that $a>0$) is even, then $f(a) = \frac{a}{2} >0 $. The same is for $a'$. Therefore, $f(a)=f(a') \implies \frac{1-a}{2} = \frac{1-a'}{2} \implies 1-a=1-a'\implies a=a'$.
+\\
+Therefore, $f(a)=f(a') \implies a=a'$. $f$ is injective.
+\\
+\smallskip\\
+Surjective:\\
+For any $m \in \bbZ$:
+
+If $m>0$, we have $n=2m \in \bbN$ such that $f(n)=\frac{n}{2}=m$.
+
+If $m\leq0$, we have $n=-2m+1 \in \bbN$ such that $f(n)=\frac{1-(-2m+1)}{2}=m$.
+\\
+Therefore, $f$ is surjective.\\
+\smallskip\\
+Since $f$ is both injective and surjective, $f$ is therefore bijective.
+\end{proof}
+
+\textbf{Exercise 1.8.4} Show that the following are finite sets: (i) The English alphabet.
+(ii) The set of all possible twelve letter words made up of letters from the English alphabet.
+(iii) The set of all subsets of a finite set.
+\begin{proof}
+(i) Let a bijection $f$ map ``a'' to 1, ``b'' to 2, ... , ``z'' to 26. Then there is a bijection between the English alphabet and $\{1,2,...,26\}$, so the English alphabet is finite.\newline
+(ii) Let $f$ be the bijection in (i). If the 12-letter word is $a_{1}a_{2}a_{3}...a_{12}$ where each $a_{i}$ is an English letter, then it can be mapped to $1+\sum_{i=1}^{12} 26^{i-1}\times (f(a_{i})-1)$. So there is a bijection between the set of all possible twelve letter words and the set $\{1,2,...,26^{12}\}$, which implies it's finite.
+\\(If the ``words'' in the question means words that exist in real life, we can prove this by showing that this set is a proper subset of the set mentioned above (all random combinations of the letters) and is therefore also finite.)\\
+(iii) Suppose the finite set $X$ has $n$ elements, then there exists a bijection of this set to $\{1,2,...,n\}$. Let's call the element that corresponds to $i$ ``the $i$th element in $X$''. Construct a binary number ${(b_{n}b_{n-2}...b_2b_1)}_{2}$ for each subset of this finite set $A$ in such a way: if the $i$th element in $X$ is also in $A$, then let $b_i$ be 1, and otherwise 0. Since the binary number can be written in a decimal form, the set of all subsets has a bijection to $\{0,1,2,...,2^n-1\}$, and therefore also a bijection to $\{1,2,...,2^n\}$. Hence, the set of all subsets of a finite set is finite.
+\end{proof}
+
+\textbf{Exercise 1.8.12} Suppose \(A, B,\) and \(C\) are subsets of a set \(X\) such that
+\(A \subseteq B \subseteq C .\) Show that if \(A\) and \(C\) have the same cardinality, then \(A\) and
+\(B\) have the same cardinality.
+\begin{proof}
+Because $A$ and $C$ have the same cardinality, there exists a bijection $h: A \rightarrow C$.
+
+Now we prove $A$ and $B$ have the same cardinality, in other words, there is a bijection between $A$ and $B$.
+
+Injection $f:A\rightarrow B$. $f(x)=x, x\in A$. This is because $A \subseteq B$. This is apparently an injection.
+
+Injection $g:B\rightarrow A$. $g(x)=h^{-1}(x)$. Because $B \subseteq C$, and there exists bijection $h^{-1}(x)$ for any $x \in C$, $g(x)$ is definitely injective.
+
+Therefore, according to Schr\"oder-Bernstein Theorem, there exists a bijection between $A$ and $B$, so \(A\) and
+\(B\) have the same cardinality.
+\end{proof}
+
+\textbf{Exercise 6(a)} Construct an injection from \(\mathbb{N}\) to \(\mathbb{N} \times \mathbb{N}\)
+$$
+f(x) = (x,x)
+$$
+\begin{proof}
+If $(a,a)=(b,b)$, apparently $a=b$. This is an injection.
+
+\end{proof}
+
+\textbf{Exercise 6(b)} Construct an injection from \(\mathbb{N} \times \mathbb{N}\) to \(\mathbb{N}\)
+$$
+f(x,y)=2^x3^y
+$$
+\begin{proof}
+If $f(a,b) = f(c, d)$, then $2^a3^b = 2^c3^d$. According to the unique factorization theorom, $a = c$ and $b =d$, so $(a,b)=(c,d)$. This is an injection.
+\end{proof}
+
+\textbf{Exercise 6(c)} Construct an injection from \(\mathbb{N}\) to \(\mathbb{Q} \)
+$$
+f(x)=x
+$$
+\begin{proof}
+This is apparent because $\bbN \subseteq\bbQ$.
+\end{proof}
+
+\textbf{Exercise 6(d)} Construct an injection from \(\mathbb{Q}\) to \(\mathbb{N} \times \mathbb{N}\)
+$$
+f(\frac{a}{b})=\left\{\begin{array}{ll}{(2a+1,b),} & {\text { if } a \geq0} \\ {(-2a, b),} & {\text { if } a <0}\end{array}\right.( \frac{a}{b} \text{ in lowest form, }b>0)
+$$
+\begin{proof}
+Apparently $2a+1$ (in case of $a\geq 0$) or $-2a$ (in case of $a<0$) and b are in $\bbN$.\\
+If $f(\frac{a}{b})=(x,y)$, $b=y$, $x$ odd $\implies 2a+1=x$ ; $x$ even $\implies -2a=x$. Hence, $a,b$ unique, $f$ is injection.
+\end{proof}
+
+\textbf{Exercise 6(e)} Use the above and 1.8.12 to conclude that $|\bbQ| = |\bbN|$
+\begin{proof}
+Let $f$ in this question be the $f$ constructed in 6(d).\\
+Let $S=\{f(n)|n\in \bbN\}$, apparently there is a bijection between $\bbN$ and $S$, and $|\bbN|=|S|$.
+Let $T=\{f(x)|x\in\bbQ\}$, apparently there is a bijection between $\bbQ$ and $T$, and $|\bbQ|=|T|$. Also, $T \subseteq \bbN \times\bbN$.
+Besides, because $\bbN \subseteq \bbQ$, $S \subseteq T$.
+\\
+There is an injection from $\bbN$ to $\bbN \times \bbN$, and an injection from $\bbN \times \bbN$ to $\bbN$, so $|\bbN|=|\bbN \times \bbN|$. Hence $|S|=|\bbN \times \bbN|$.
+\\
+Therefore, since $S \subseteq T \subseteq \bbN \times \bbN$, according to 1.8.12, $S$ and $T$ have the same cardinality. This implies that $\bbN$ and $\bbQ$ have the same cardinality, or $|\bbQ| = |\bbN|$.
+\end{proof}
+
+
+\end{document}

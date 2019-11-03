@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Homework 1}
+\author{Yifan}
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+%\setcounter{section}{1}
+
+\begin{center}
+{\large Homework 1} \\
+\vspace{.2in}
+Yifan Liu
+\end{center}
+
+\bigskip \bigskip
+
+% \section{Chapter 1}
+
+\textbf{Exercise 1.2.2} If $A$ and $B$ are sets, show that $A = B$ if and only if $A \subseteq B$ and $B \subseteq A$.
+% If $A$ and $B$ are sets, show that $A = B$ if and only if $A \subseteq B$ and $B \subseteq A$.
+\begin{proof}
+% First assume that $A = B$. According to the definition of the equality of sets, if $x \in A$, then $x \in B$, and conversely if $x \in B$, then $x \in A$. According to the definition of inclusion, $\forall x \in A: x \in B \implies A \subseteq B$
+$\Longrightarrow$ (from left to right): If $A = B$, then by definition of the equality of sets, $\forall x \in A: x \in B \text{ and } \forall x \in B: x \in A \text{, in other words, } A \subseteq B \text{ and } B \subseteq A \text{.}$\\
+$\Longleftarrow$ (from right to left): $A \subseteq B \text{ and } B \subseteq A \implies \text{by definition of } \subseteq \text{, } \forall x \in A: x \in B \text{ and } \forall x \in B: x \in A \text{, which is the same as the definition of set equality, in other words,}\\ A = B \text{.}$
+\end{proof}
+
+\textbf{Exercise 1.2.3} Suppose that \(A, B,\) and \(C\) are sets. If \(A \subseteq B\) and \(B \subseteq C\), show that \(A \subseteq C\).
+
+\begin{proof}
+In order to prove $A \subseteq C$, we need to show that $\forall x \in A: x \in C$. \\
+Let $x \in A$. Because $A \subseteq B$, by definition, $x$ is also in $B$, in other words, $x \in B$. Because $x \in B$, and $B \subseteq C$, similarly we have $x \in C$. Hence, $\forall x \in A: x \in C$, which means $A \subseteq C$.
+\end{proof}
+
+\textbf{Exercise 1.2.4} Show that if \(A\) is a set, then \(\varnothing \subseteq A\).
+
+\begin{proof}
+In order to prove $\varnothing \subseteq A$, we need to show that $\forall x \in \varnothing: x \in A$. Because there are no elements in $\varnothing$, $x \in \varnothing$ would never be true. When the antecedent is false, no matter what the consequent is, the statement is always true. For this reason, $\forall x \in \varnothing: x \in A$. By definition, this is the same as $\varnothing \subseteq A$.
+\end{proof}
+
+% \begin{definition}
+% We use
+% \begin{verbatim}
+% \begin{tag}
+% Stuff
+% \end{tag}
+% \end{verbatim}
+% environments for various things where tag = definition, lemma, equation, array, theorem.  There are many more.  Look in the header of the .tex file for more.
+% \end{definition}
+
+% If we have an equation, then it becomes pulled out of text.
+% \begin{equation*}
+% x + y = z.
+% \end{equation*}
+
+% Use dollar signs for math symbols not in equations $x+y = z$.
+
+% Its easy to add special symbols such as $\alpha, \pm, \sum, x \in A$.
+
+% If you want to find a special symbol look online.
+
+
+
+
+
+\end{document}

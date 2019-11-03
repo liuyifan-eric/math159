@@ -1,0 +1,332 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Homework 3}
+\author{Yifan}
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+%\setcounter{section}{1}
+
+\begin{center}
+{\large Homework 3} \\
+\vspace{.2in}
+Yifan Liu
+\end{center}
+
+\bigskip \bigskip
+
+% \section{Chapter 1}
+
+\textbf{Exercise 1.4.9} If \(A_{1}\) has \(k_{1}\) elements, \(A_{2}\) has \(k_{2}\) elements, \(\ldots, A_{n}\) has \(k_{n}\)elements, show that \(\#\left(A_{1} \times A_{2} \times \cdots \times A_{n}\right)=\left(\# A_{1}\right)\left(\# A_{2}\right) \cdots\left(\# A_{n}\right)=\) \(k_{1} k_{2} \cdots k_{n} .\)
+\begin{proof}
+When $n=1$, apparently $\#A_{1}=\#A_1$.\\
+Given \(\#\left(A_{1} \times A_{2} \times \cdots \times A_{n}\right)=\left(\# A_{1}\right)\left(\# A_{2}\right) \cdots\left(\# A_{n}\right)\), then:\\
+For any $(a_1,a_2,\cdots,a_n) \in (A_{1} \times A_{2} \times \cdots \times A_{n})$, there are $k_{n+1}$ different $a_{n+1} \in A_{n+1}$ such that $(a_1,a_2,\cdots,a_{n+1}) \in (A_{1} \times A_{2} \times \cdots \times A_{n+1})$. Hence, \(\#\left(A_{1} \times A_{2} \times \cdots \times A_{n+1}\right)
+=\left(\#\left(A_{1} \times A_{2} \times \cdots \times A_{n}\right)\right)\left(\#A_{n+1}\right)
+=\left(\# A_{1}\right)\left(\# A_{2}\right) \cdots\left(\# A_{n+1}\right)\).
+\end{proof}
+
+\textbf{Exercise 2} Show that, for all \(n \in \mathbb{N},\)
+$$
+1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2 n+1)}{6}
+$$
+\begin{proof}
+If $n = 1$:
+$1^{2}=\frac{1\times(1+1)\times(2\times 1+1)}{6}=1$. True.\\
+If $1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2 n+1)}{6}$ holds for $n$, then it also holds for $n + 1$:\\
+\begin{align*}
+1^{2}+2^{2}+\cdots+n^{2}+\cdots+(n+1)^{2}&=\frac{n(n+1)(2 n+1)}{6}+(n+1)^{2}\\
+&=\frac{n(n+1)(2 n+1)+6n^{2}+12n+6}{6}\\
+&=\frac{2 n^{3}+9 n^{2}+13 n+6}{6}\\
+&=\frac{(n+1)(n+1+1)(2(n+1)+1)}{6}
+\end{align*}
+Thus, $\forall n \in \bbN$, $1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2 n+1)}{6}$.
+
+\end{proof}
+
+\textbf{Exercise 3} Show that, for all \(x \neq 1\) and \(n \in \mathbb{N}\)
+$$
+1+x+x^{2} \ldots+x^{n}=\frac{x^{n+1}-1}{x-1}
+$$
+\begin{proof}
+Given $x\neq1$\\
+If $n = 1$, apparently $1 + x = \frac{x^{1+1}-1}{x-1}= \frac{x^{2}-1}{x-1}$.\\
+If the equation holds for $n$, then it also holds for $n+1$:\\
+\begin{align*}
+1+x+x^{2} \ldots+x^{n}+x^{n+1}
+&=\frac{x^{n+1}-1}{x-1}+x^{n+1}\\
+&=\frac{x^{n+1}-1+x^{n+2}-x^{n+1}}{x-1}\\
+&=\frac{x^{n+2}-1}{x-1}\\
+\end{align*}
+Hence, $1+x+x^{2} \ldots+x^{n}=\frac{x^{n+1}-1}{x-1}$.
+\end{proof}
+
+\textbf{Exercise 1.7.9} Prove Pigeon Hole Principle (Suppose that \(A\) is a set with \(n\) elements, \(B\) is a set with \(m\) elements, and \(n>m\). If \(f: A \rightarrow B\) is a function, there
+are at least two distinct elements of \(A\) that correspond to the same element
+of \(B\).)
+\begin{proof}
+Suppose there are no two elements of $A$ that correspond to the same element of $B$, then there should be at least $n$ elements in $B$, while there is actually only $m$ elements ($n>m$). Contradiction.\\
+Hence, there are at least two elements of $A$ that correspond to the same element of $B$.
+\end{proof}
+
+\textbf{Exercise 1.7.15(i)}\(f: \mathbb{N} \rightarrow \mathbb{N}, f(n)=2 n\)
+\begin{proof}
+Injective:
+If \(f(a)=f\left(a^{\prime}\right),\) then \(2a=2a^{\prime}\), then \(a=a^{\prime}\).\\
+Not surjective:
+$\exists 1 \in \bbN \text{ s.t. } \nexists n \in \bbN: 2n=1.
+$ In other words, $1 \notin f(\bbN)$.
+So $f(\bbN) \neq \bbN$.
+\end{proof}
+
+\textbf{Exercise 1.7.15(iii)}\(f: \mathbb{N} \rightarrow \mathbb{Q}, f(n)=n\)
+\begin{proof}
+Injective:
+If \(f(a)=f\left(a^{\prime}\right),\) then \(a=a^{\prime}\).\\
+Not surjective:
+$\exists 0.1 \in \bbQ \text{ s.t. } \nexists n \in \bbN: n=0.1.
+$ In other words, $0.1 \notin f(\bbN)$.
+So $f(\bbN) \neq \bbQ$
+\end{proof}
+
+\textbf{Exercise 1.7.15(v)} Write the real numbers in terms of their decimal expansions. As
+usual, we do not allow a real number to end in all 9's repeating.
+Let \(f: \mathbb{R} \rightarrow \mathbb{N}\) be defined by: \(f(x)\) equals the third digit of \(x\) after
+the decimal point (this is called the Michelle function).
+\begin{proof}
+We have to suppose $0 \in \bbN$ or the definition wouldn't make sense.\\
+Not injective:
+$1.001 \neq 2.001$ and $f(1.001)=f(2.001)=1$.\\
+Not surjective:
+$10 \in \bbN$ but $10 \notin f(\bbR)$ as $f(x)$ is always one single DIGIT.
+\end{proof}
+
+\textbf{Exercise 1.7.20} Given \(f: A \rightarrow B,\) suppose there exist \(g, h: B \rightarrow A\)
+so that \(f \circ g=I_{B}\) and \(h \circ f=I_{A} .\) Show that \(f\) is a bijection and that
+\(g=h=f^{-1} .\)
+\begin{proof}
+First, \(f\) is surjective. For any \(b \in B\), \(\exists a=g(b) \) s.t. \(f(a)=\)
+\(f\left(g(b)\right)=f \circ g(b)=I_{B}(b)=b .\) So \(f\) is surjective.\\
+$f$ is also injective. If $a_1, a_2 \in A $ and $f(a_1)=f(a_2)$, then
+\begin{align*}
+a_{1} &=I_{A}\left(a_{1}\right) \\
+&=h \circ f\left(a_{1}\right) \\
+&=h\left(f\left(a_{1}\right)\right) \\
+&=h\left(f\left(a_{2}\right)\right) \\
+&=h \circ f\left(a_{2}\right) \\
+&=I_{A}\left(a_{2}\right) \\
+&=a_2
+\end{align*}
+Hence, $f$ is bijective. \\
+Then we prove \(g=h=f^{-1} .\)\\
+(Note: Definition of inverse: If \(b \in B,\) then we set
+\(f^{-1}(b)=a\) where \(a\) is the unique element of \(A\) such that \(f(a)=b\).
+)\\
+Let $b \in B$, then there exists a unique $a$ such that $f(a)=b$.\\ $h(b)=h(f(a))=I_A(a)=a$, so $h=f^{-1}$.
+\\$f(g(b))=I_B(b)=b=f(a)$, and because $f$ is bijective, $g(b)=a$, so $g=f^{-1}$.\\
+Hence, $g=h=f^{-1}$.
+\end{proof}
+
+\textbf{Exercise 1.7.24(i)} \(f\left(A_{1} \cup A_{2}\right)=f\left(A_{1}\right) \cup f\left(A_{2}\right)\)
+\begin{proof} First,
+\(f\left(A_{1} \cup A_{2}\right) \subseteq f\left(A_{1}\right) \cup f\left(A_{2}\right)\):\\
+\(\forall y \in f\left(A_{1} \cup A_{2}\right),\) \(\exists x \in A_{1} \cup A_{2}\)
+such that \(f(x)=y .\) By the definition of union, \(x \in A_{1}\) or (``or'' in mathematics) \(x \in A_{2} .\) This implies that \(y \in f\left(A_{1}\right)\)
+or \(y \in f\left(A_{2}\right) .\) Therefore, \(y \in f\left(A_{1}\right) \cup f\left(A_{2}\right) .\)\\
+Second, \(f\left(A_{1}\right) \cup f\left(A_{2}\right) \subseteq f\left(A_{1} \cup A_{2}\right)\):\\
+Let \(y \in f\left(A_{1}\right) \cup f\left(A_{2}\right) .\) Then \(y \in f\left(A_{1}\right)\) or \(y \in f\left(A_{2}\right)\) so there
+is \(x_{1} \in A_{1}\) such that \(f\left(x_{1}\right)=y\) or there is \(x_{2} \in A_{2}\) such that \(f\left(x_{2}\right)=y .\) In either case, \(\exists x \in A_{1} \cup A_{2}\) such that \(f(x)=y .\) Therefore \(f\left(A_{1}\right) \cup f\left(A_{2}\right) \subseteq f\left(A_{1} \cup A_{2}\right)\).\\
+Hence, \(f\left(A_{1} \cup A_{2}\right)=f\left(A_{1}\right) \cup f\left(A_{2}\right) .\)
+\end{proof}
+
+\textbf{Exercise 1.7.24(iv)} \(f^{-1}\left(B_{1} \cap B_{2}\right)=f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right)\)
+\begin{proof}
+First, \(f^{-1}\left(B_{1} \cap B_{2}\right) \subseteq f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right)\):\\
+Take \(x \in f^{-1}\left(B_{1} \cap B_{2}\right) .\) Then \(f(x) \in B_{1} \cap B_{2}\) so \(f(x) \in B_{1}\) and \(f(x) \in B_{2}\).
+Hence \(x \in f^{-1}\left(B_{1}\right)\) and \(x \in f^{-1}\left(B_{2}\right) .\) That is, \(x \in f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right)\) and so
+\(f^{-1}\left(B_{1} \cap B_{2}\right) \subseteq f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right)\).\\
+Second, \(f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right) \subseteq f^{-1}\left(B_{1} \cap B_{2}\right)\):\\
+Take \(x \in f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right) .\) Then \(x \in f^{-1}\left(B_{1}\right)\) and \(x \in f^{-1}\left(B_{2}\right)\). Then \(f(x) \in B_{1}\) and \(f(x) \in B_{2}\) , so \(f(x) \in B_{1} \cap B_{2}\). Hence \(x \in f^{-1}\left(B_{1} \cap B_{2}\right)\). That is, \(f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right) \subseteq f^{-1}\left(B_{1} \cap B_{2}\right)\).\\
+Therefore, \(f^{-1}\left(B_{1} \cap B_{2}\right)=f^{-1}\left(B_{1}\right) \cap f^{-1}\left(B_{2}\right)\).
+\end{proof}
+
+\textbf{Exercise 1.7.25} Find an example to show that equality does not necessarily hold in (ii) \(f\left(A_{1} \cap A_{2}\right) \subseteq f\left(A_{1}\right) \cap f\left(A_{2}\right)\)
+\begin{proof}
+Example:\\
+$$
+A_1=\{0,1\}, A_2=\{0,2\}, f(0)=0, f(1)=f(2)=1
+$$
+Then
+$$
+f\left(A_{1} \cap A_{2}\right)=f(\{0\})=\{0\},\;
+f\left(A_{1}\right) \cap f\left(A_{2}\right)=\{0,1\}\cap\{0,1\}=\{0,1\}, \;
+$$
+$$f\left(A_{1} \cap A_{2}\right) \neq f\left(A_{1}\right) \cap f\left(A_{2}\right)$$
+\end{proof}
+
+
+
+
+
+% \begin{definition}
+% We use
+% \begin{verbatim}
+% \begin{tag}
+% Stuff
+% \end{tag}
+% \end{verbatim}
+% environments for various things where tag = definition, lemma, equation, array, theorem.  There are many more.  Look in the header of the .tex file for more.
+% \end{definition}
+
+% If we have an equation, then it becomes pulled out of text.
+% \begin{equation*}
+% x + y = z.
+% \end{equation*}
+
+% Use dollar signs for math symbols not in equations $x+y = z$.
+
+% Its easy to add special symbols such as $\alpha, \pm, \sum, x \in A$.
+
+% If you want to find a special symbol look online.
+
+
+
+
+
+\end{document}
