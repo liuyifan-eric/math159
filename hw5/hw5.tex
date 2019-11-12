@@ -18,9 +18,9 @@
 \onehalfspacing
 %----------Commands----------
 
-%%penalizes orphans 
+%%penalizes orphans
 \clubpenalty=9999
-\widowpenalty=9999 
+\widowpenalty=9999
 
 %% bold math capitals
 \newcommand{\bA}{\mathbf{A}}
@@ -153,8 +153,8 @@ Yifan Liu
 
 % \section{Chapter 1}
 
-\textbf{Exercise 1} $\text { Let } S=\left\{1-\frac{(-1)^{n}}{n} 
-\mid n \in \mathbb{N}\right\} . 
+\textbf{Exercise 1} $\text { Let } S=\left\{1-\frac{(-1)^{n}}{n}
+\mid n \in \mathbb{N}\right\} .
 \text { Find the infimum and supremum of } S$.
 \begin{center}
     inf $S = \frac{1}{2}$, sup $S = 2$
@@ -170,14 +170,14 @@ Since a natural number is either odd or even, the elements in $S$ is less than $
 
 Second, any other lower bound is less than or equal to $\frac{1}{2}$; any other upper bound is greater than or equal to $2$.\\
 This is because $\frac{1}{2}$ and $2$ are elements in $S$ ($\frac{1}{2}$ when $n =2$; $2$ when $n=1$). By definition, any lower bound should be less than or equal to all elements in $S$, including $\frac{1}{2}$; any upper bound should be greater than or equal to all elements in $S$, including $2$.
-    
+
 Hence, inf $S = \frac{1}{2}$, sup $S = 2$.
 \end{proof}
 
-\textbf{Exercise 2} Show that sup$\left\{1-\frac{1}{n} 
+\textbf{Exercise 2} Show that sup$\left\{1-\frac{1}{n}
 \mid n \in \mathbb{N}\right\}=1$.
 \begin{proof}
-Let $A = \left\{1-\frac{1}{n} 
+Let $A = \left\{1-\frac{1}{n}
 \mid n \in \mathbb{N}\right\}=1$.\\
 First, $1$ is an upper bound of $A$: because $\frac{1}{n} > 0 \text{ for all }
 n \in \bbN$, $1-\frac{1}{n} < 1-0=1$. \\
@@ -218,15 +218,15 @@ Let this upper bound in $S$ be $L$.\\
 First, $L$ is an upper bound of $S$ (given);\\
 Second, if $M$ is an upper bound of $S$, then it should be greater than any
 element in $S$, including $L$. In other words, $L < M$.\\
-By definition, this shows that this upper bound $L$ is the supremum. 
+By definition, this shows that this upper bound $L$ is the supremum.
 \end{proof}
 
-\textbf{Exercise 5} Prove the Archimedean property: that if 
+\textbf{Exercise 5} Prove the Archimedean property: that if
 $x \in \bbR$ then $\exists n_x \in \bbN$ so that
 $x < n_x$.
 \begin{proof}
-Suppose for a given $x \in \bbR$ there does NOT exist such a $n_x > x$, 
-in other words, $\forall n \in \bbN, x > n$. Then $x$ is an upper bound of 
+Suppose for a given $x \in \bbR$ there does NOT exist such a $n_x > x$,
+in other words, $\forall n \in \bbN, x > n$. Then $x$ is an upper bound of
 $\bbN$ in $\bbR$. By the completeness of $\bbR$ (or that least upper bounds exist in $\bbR$), there exists a least upper bound $L$. Hence, $L - 1$ should not be an upper bound of $\bbN$, which implies that there exists $n \in \bbN$ such that $L-1<n$, but this means that $L < n+1$ where $n+1 \in \bbN$, which contradicts with $L$ being the upper bound of $\bbN$. Therefore, the assumption must be false; there exists $n_x \in \bbN$ so that $x < n_x$.
 \end{proof}
 
@@ -259,8 +259,35 @@ $\mathrm{~ B \} , ~ t h e n ~} \operatorname{lub}(A \cdot B)=\operatorname{lub}(
 
 (iv) Formulate the analogous problems for the greatest lower bound.
 \begin{proof}
+    I will use sup instead of lup.
+
+(i) For each \(x \in A \cup B, \text { either } x \in A \) (which implies \( x \leq \sup A) \text { or } x \in B \) (which implies \( x \leq \sup B)\). Hence, $\forall x \in A \cup B, x \leq \max\{\sup A,\sup B\}$. So it is an upper bound, which means $\sup (A \cup B) \leq \max \{\sup A, \sup B\}$.
+\\Meanwhile, \(\operatorname{since} A \subseteq A \cup B\) and \(B \subseteq A \cup B, \sup A \leq \sup (A \cup B)\) and \(\sup B \leq \sup (A \cup B)\). Therefore, \(\sup (A \cup B) \geq \max \{\sup A, \sup B\}\).
+\\Combining two inequalities, we have \(\sup (A \cup B) = \max \{\sup A, \sup B\}\)
+
+(ii) Since \(a \leq \sup A, b \leq \sup B,\) we have \(a+b \leq \sup A +\sup B\), so $\sup A +\sup B$ is an upper bound. Then we prove it's the least one. Suppose $x < \sup A +\sup B$, we want to prove $x$ cannot be an upper bound. $\epsilon = \sup A +\sup B - x > 0 \implies \frac{\epsilon}{2} > 0$. Since $\sup A$ and $\sup B$ are the ``least'' upper bounds, $\sup A - \frac{\epsilon}{2}$ and $\sup B - \frac{\epsilon}{2}$ are not upper bounds, so there exists $a \in A,$ $b \in B$ s.t. $a > \sup A - \frac{\epsilon}{2}$; $b > \sup B - \frac{\epsilon}{2}$. Thus $x = \sup A + \sup B - \epsilon < a + b$, which means it's not an upper bound of $A+B$. In conclusion, $\sup A +\sup B$ is the supremum.
+
+(iii) Since
+\(a \leq \sup A, b \leq \sup B,\)
+and elements in $A, B$ are all positive,
+we have \(ab \leq \sup A \cdot \sup B\), so $\sup A \cdot\sup B$ is an upper bound. Then we prove it's the least one.
+Suppose $x < \sup A \cdot\sup B$, we want to prove $x$ cannot be an upper bound. $\epsilon = \sup A \cdot\sup B - x > 0 \implies \frac{\epsilon}{2\sup A} > 0 \text{ and } \frac{\epsilon}{2\sup B} > 0$. Since $\sup A$ and $\sup B$ are the ``least'' upper bounds,
+$\sup A - \frac{\epsilon}{2\sup B}$ and $\sup B - \frac{\epsilon}{2\sup A}$ are not upper bounds, so there exists $a \in A,$ $b \in B$ s.t. $a > \sup A - \frac{\epsilon}{2\sup B}$; $b > \sup B - \frac{\epsilon}{2\sup A}$. Thus
+
+$$x = \sup A \cdot \sup B - \epsilon < \sup A \cdot \sup B - \frac{\epsilon}{2} - \frac{\epsilon}{2} + \frac{\epsilon^2}{4\sup A \cdot \sup B} < ab$$ where $ab$ is in $A \cdot B$, which means $x$ is not an upper bound of $A \cdot B$. In conclusion, $\sup A \cdot \sup B$ is the supremum.
 
 \end{proof}
+
+(iv)
+
+    $\text{glb} (A \cup B)=\min \{\operatorname{glb}(A), \operatorname{glb}(B)\} $
+
+    If $A+B=\{a+b \mid a \in A, b \in B\}, \text { then } \operatorname{glb}(A+B)=\operatorname{glb}(A)+ \operatorname{glb}(B) $
+
+    If the elements of $A$ and $B$ are positive and $A \cdot B=\{a b \mid a \in A, b \in$
+    $\mathrm{~ B \} , ~ t h e n ~} \operatorname{glb}(A \cdot B)=\operatorname{glb}(A) \operatorname{glb}(B)$
+
+\bigskip
 
 
 \textbf{Exercise 3.6.3} Prove the properties of the absolute value.
@@ -273,18 +300,18 @@ $\mathrm{~ B \} , ~ t h e n ~} \operatorname{lub}(A \cdot B)=\operatorname{lub}(
 
 
 \begin{proof}
-(1) For $x \in \bbR$, either $x \geq 0$ or $x < 0$. Let's prove that $|x| \geq 0$ in both cases. If $x \geq 0$, $|x| = x \geq 0$; if $x < 0$, $|x| = -x > 0$. So for any  $x \in \mathbb{R},|x| \geq 0$. 
+(1) For $x \in \bbR$, either $x \geq 0$ or $x < 0$. Let's prove that $|x| \geq 0$ in both cases. If $x \geq 0$, $|x| = x \geq 0$; if $x < 0$, $|x| = -x > 0$. So for any  $x \in \mathbb{R},|x| \geq 0$.
 
 If $x=0$, because $x\geq 0$, $|x|=x =0$. We then prove the contrapositive of $|x|=0\implies x=0$. If $x\neq 0$, it's either greater or less than 0. If greater than 0, then $|x|=x>0\neq 0$; if less than 0, then $|x|=-x>0\neq 0$. Combining two directions, we have $|x|=0$ iff $x=0$.
 
 \bigskip
-(2) 
+(2)
 If $x=0$ or $y=0$
 then:
 $
 xy=0 \implies |xy|=|0|=0
 $
-and either $|x|=0$ or $|y|=0$ so 
+and either $|x|=0$ or $|y|=0$ so
 $
 |x||y|=0=|xy|
 $.
@@ -292,25 +319,25 @@ $.
 If $x>0$ and $y>0$
 then:
 $|x| =x, |y| =y \implies |x||y| =x y $;
-and 
+and
 $xy>0, |xy|=xy = |x||y|$.
 
 If $x<0$ and $y<0$
 then:
 $|x| =-x, |y| =-y \implies |x||y| =(-x)(-y)=xy $;
-and 
+and
 $xy>0, |xy|=xy = |x||y|$.
 
 If $x<0$ and $y>0$
 then:
 $|x| =-x, |y| =y \implies |x||y| =(-x)y=-xy $;
-and 
+and
 $xy<0, |xy|=-xy = |x||y|$.
 
 If $x>0$ and $y<0$
 then:
 $|x| =x, |y| =-y \implies |x||y| =x(-y)=-xy $;
-and 
+and
 $xy<0, |xy|=-xy = |x||y|$.
 
 Hence, in all possible cases, $|xy|=|x||y|$.
@@ -333,18 +360,18 @@ Since $a+b$, depending on its sign, is either $a+b$ or $-a-b$, while both are le
 
 \textbf{Exercise 3.6.5} Show that the limit of a convergent sequence is unique.
 \begin{proof}
-Let the convergent sequence be $(a_k)_{k\in \bbN}$. 
+Let the convergent sequence be $(a_k)_{k\in \bbN}$.
 Suppose it has two different limits $a$ and $b$ $(a \neq b)$.
 Let $\epsilon = \frac{|a-b|}{5}$.\\
-According to the definition of convergent sequence, there exists $N_1 \in \bbN$ such that 
-$|a_n - a| < \epsilon$ for all $n > N_1$; 
+According to the definition of convergent sequence, there exists $N_1 \in \bbN$ such that
+$|a_n - a| < \epsilon$ for all $n > N_1$;
 Also
-there exists $N_2 \in \bbN$ such that 
+there exists $N_2 \in \bbN$ such that
 $|a_n - b| < \epsilon$ for all $n > N_1$.\\
-Let $N$ be the greater one of $N_1$ and $N_2$, then 
-$|a_n - a| < \epsilon$ and 
+Let $N$ be the greater one of $N_1$ and $N_2$, then
+$|a_n - a| < \epsilon$ and
 $|a_n - b| < \epsilon$ for all $n > N$.\\
-However, by triangle inequality, $|a-b| \leq |a-a_n|+|a_n-b| = |a_n-a|+|a_n-b| \leq \frac{2|a-b|}{5}$, which is impossible ($1$ is greater than $\frac{2}{5}$). Contradiction! \\Hence the assumption $a\neq b$ is false. $a=b$. In other words, the limit of the convergent sequence is unique. 
+However, by triangle inequality, $|a-b| \leq |a-a_n|+|a_n-b| = |a_n-a|+|a_n-b| \leq \frac{2|a-b|}{5}$, which is impossible ($1$ is greater than $\frac{2}{5}$). Contradiction! \\Hence the assumption $a\neq b$ is false. $a=b$. In other words, the limit of the convergent sequence is unique.
 \end{proof}
 
 
