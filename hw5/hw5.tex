@@ -208,7 +208,7 @@ $$
 $$
 This is to say, $-t$ is a lower bound of $S$, so it should be less than or equal to the least lower bound of $S$. $-t\leq \infS$, so $t \geq -\infS$.
 
-Therefore, $-\infS$ is the supremum of $S'$, which is the same to say, inf $S=-\text{sup}\left\{-s \mid s \in S \right\}$.
+Therefore, $-\infS$ is the supremum of $S'$, i.e. inf $S=-\text{sup}\left\{-s \mid s \in S \right\}$.
 \end{proof}
 
 \textbf{Exercise 4} Suppose that a set $S \subset \bbR$ contains one of
@@ -235,7 +235,23 @@ Let $A=\left\{x \in \mathbb{Q} \mid x^{2}<n\right\} .$ Show that $A$ is bounded 
 a glb nor a lub in $\bbQ$. Conclude that $\sqrt{n}$ exists in $\mathbb{R},$ that is, there exists a
 real number $a$ such that $a^{2}=n .$
 \begin{proof}
+Apparently $A$ is bounded in $\bbQ$. For example, $n$ is an upper bound. $n$ is a positive integer so $n^2 > n$. $x^2 < n \implies x^2 < n^2 \implies x < n$. $-n$ is a lower bound. $x^2 < n^2 \implies x > -n$. So $A$ is bounded in $\bbQ$. Then we prove there's neither lub nor glb in $\bbQ$. 
 
+Step 1: If $\alpha^{2}<n,$ then $\alpha$ cannot be an upper bound for $A$. We want to find a number between $\alpha$ and $\sqrt{n}$. Let $x=\alpha+\epsilon \;(0 < \epsilon < 1)$. Also $\alpha < \alpha^2 < n$. $x^{2}=(\alpha+\epsilon)^{2}=\alpha^{2}+2 \alpha \epsilon+\epsilon^{2} \leq \alpha^{2}+2n\epsilon+\epsilon = \alpha^{2}+(2n+1)\epsilon < n$. So we pick $x= \alpha + \frac{n-\alpha^2}{2n+2} < n$, which is in $A$ and greater than $\alpha$. So $\alpha$ is not an upper bound of $A$. 
+
+Step 2: If $\alpha^{2}>n,$ then $\alpha$ cannot be the least upper bound for $A$. We want to find a number between $\alpha$ and $\sqrt{n}$. Let $x=\alpha-\epsilon \;(0< \epsilon)$. $\alpha \leq n$ otherwise $n$ is an apparent smaller upper bound. 
+$x^{2}=(\alpha-\epsilon)^{2}=\alpha^{2}-2 \alpha \epsilon+\epsilon^{2} \geq \alpha^{2}-2n\epsilon > n$. So we pick $x= \alpha - \frac{\alpha^2-n}{2n+2}$, which is an upper bound for $A$ but smaller than $\alpha$. 
+
+Therefore, the least upper bound must follow that $\alpha^2 = n$. However, because $n$ is not a perfect square, there does not exist such $\alpha \in \bbQ$. We can prove it:
+
+Step 3: Since $n$ is not a perfect square, $\exists p$ prime s.t. $p\mid n$ but $p^2\nmid n$. Suppose exists $\frac{a}{b} \in \bbQ$ ($a, b$ coprime) whose square is $n$. 
+$$
+\left(\frac{a}{b}\right)^2 = n \implies a^2 = nb^2 \implies p \mid a^2 \implies p \mid a \implies p\left(\frac{a}{p}\right)^2 = \left(\frac{n}{p}\right)b^2 \implies p\mid b.
+$$
+so $a, b$ have comman factor $p$, which is a contradiction. Therefore there does not exist $\alpha \in \bbQ$ such that $\alpha^2 = n$. 
+
+However, we can see that $\sqrt{n}$ exis
+ts in $\bbR$, because we know that there must be a lup for $A$ in $\bbR$ (as we know $A$ is bounded), and we have deduced that $\alpha^2 = n$. So such $\alpha$ must exist in $\bbR$. 
 \end{proof}
 
 % Exercise $3.1 .14 .$ Suppose that $A$ and $B$ are bounded sets in $\mathbb{R} .$ Prove or
