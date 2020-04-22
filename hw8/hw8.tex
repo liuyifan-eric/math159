@@ -1,0 +1,232 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Homework 8}
+\author{Yifan}
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+%\setcounter{section}{1}
+
+\begin{center}
+{\large Homework 8} \\
+\vspace{.2in}
+Yifan Liu
+\end{center}
+
+\bigskip \bigskip
+
+% \section{Chapter 1}
+
+\textbf{Exercise 1} Show that a finite subset of $\bbR$ has no accumulation points.
+\begin{proof}
+    Suppose to the contrary that a finite subset of $\bbR$, $S=\left\{a_{1}, a_{2}, \ldots, a_{n}\right\}$ has a accumulation point $x$, then by definition, for all $\varepsilon>0,$ we have $((x-\varepsilon, x+\varepsilon) \backslash\{x\}) \cap S \neq \varnothing$. However, let $\varepsilon = \min\{|x-a_i| \mid a_i \in S, x \neq a_i\}$. Since $x \neq a_i$ and $S$ is finite, $\varepsilon$ is positive. We can see that there is no element in $S\setminus \{x\}$ within $(x-\varepsilon, x+\varepsilon)$ by definition of $\varepsilon$. Contradition! Hence, a finite subset of $\bbR$ must have no accumulation points. 
+\end{proof}
+
+\textbf{Exercise 2} We say a subset of $\bbR$ is \textit{discrete} it is contains no accumulation points.
+Show that a discrete set is closed. Find a discrete set which is not finite.
+\begin{proof}
+    $\{\frac{1}{n} \mid n \in \bbN\}$ is discrete but not closed. 
+
+    This is a proof that a discrete set is not open:
+
+    Given an open set $S$. By definition, for each point $x \in S, \text { there is an } \varepsilon_0>0 $ (depending on $x$) such that $(x-\varepsilon_0, x+\varepsilon_0) \subseteq S .$ Then $(x-\varepsilon, x+\varepsilon)\setminus\{x\} \cap S$ is nonempty for all $\varepsilon$ (i.e. $x+ \min\{\varepsilon/2, \varepsilon_0/2\}$), so $x$ is an accumulation point, which means $S$ is not discrete. Therefore, open sets cannot be discrete.
+\end{proof}
+A discrete set which is not finite: $\bbN$. 
+\bigskip
+
+\textbf{Exercise 3.a} Arbitrary unions of open sets are open.
+\begin{proof}
+    $A=\bigcup_{i \in \mathbb{N}} A_{i}$. $A_i$ are open, we want to prove $A$ is also open. For every $x \in A$, $x$ must be in some $A_i$, which is open, so there is an $\varepsilon>0 $ (depending on $x$) such that $(x-\varepsilon, x+\varepsilon) \subseteq A_i \subseteq A.$ Therefore $A$ is open. 
+\end{proof}
+
+\textbf{Exercise 3.b} Finite intersections of open sets are open.
+\begin{proof}
+    $A=\bigcap_{i \in \mathbb{N}, 1 \leq i \leq n} A_{i}$. $A_i$ are open, we want to prove $A$ is also open. For every $x \in A$, $x$ must be in all $A_i$, which are open, so for each $i$ there is an $\varepsilon_i>0 $ (depending on $x$) such that $(x-\varepsilon_i, x+\varepsilon_i) \subseteq A_i.$ Let $\varepsilon = \min\{A_i\mid 1 \leq i \leq n\}$ (minimum exists because $n$ is finite). Then $(x-\varepsilon, x+\varepsilon) \subseteq (x-\varepsilon_i, x+\varepsilon_i) \subseteq A_i$ for all $i$. So $(x-\varepsilon, x+\varepsilon) \subseteq \bigcap_{i \in \mathbb{N}, 1 \leq i \leq n} A_{i} = A$. Therefore $A$ is open. 
+\end{proof}
+
+\textbf{Exercise 3.c} Arbitrary intersections of closed sets are closed.
+\begin{proof}
+    $A=\bigcap_{i \in \mathbb{N}} A_{i}$. $A_i$ are closed, we want to prove $A$ is also closed. Note that $A^c=(\bigcap_{i \in \mathbb{N}} A_{i})^c = \bigcup_{i \in \mathbb{N}} A_{i}^c$. Because $A_{i}^c$ are open (given $A_i$ are closed), according to 3.a, $A^c$ is then open, which implies that $A$ is closed. 
+\end{proof}
+
+\textbf{Exercise 3.d} Finite unions of closed sets are closed.
+\begin{proof}
+    $A=\bigcup_{i \in \mathbb{N}, 1 \leq i \leq n} A_{i}$. $A_i$ are closed, we want to prove $A$ is also closed. Note that $A^c=(\bigcup_{i \in \mathbb{N}, 1 \leq i \leq n} A_{i})^c = \bigcap_{i \in \mathbb{N}, 1 \leq i \leq n} A_{i}^c$. Because $A_{i}^c$ are open (given $A_i$ are closed), according to 3.b, $A^c$ is then open, which implies that $A$ is closed. 
+\end{proof}
+
+\textbf{Exercise 4} Prove that every open set is a union of open intervals.
+\begin{proof}
+    Given an open set $S$. By definition, for every $x_i \in S$, there is an $\varepsilon_i>0 $ (depending on $x_i$) such that $(x_i-\varepsilon_i, x_i+\varepsilon_i) \subseteq S$. Consider $S' = \bigcup_{i\in \bbN} (x_i-\varepsilon_i, x_i+\varepsilon_i)$, which is a union of open intervals. Each open interval $(x_i-\varepsilon_i, x_i+\varepsilon_i)$ is a subset of $S$, so their union $S' \subseteq S$. On the other hand, consider each element in $S$, $x_i$: $x_i \in (x_i-\varepsilon_i, x_i+\varepsilon_i) \subseteq S'$, so $S \subseteq S'$. Therefore $S = S'$. $S$ is a union of open intervals. 
+\end{proof}
+
+The Cantor ternary set is constructed by starting with the interval $[0,1]$
+and inductively removing open ``middle-thirds'', i.e. first remove the open
+interval $\left(\frac{1}{3}, \frac{2}{3}\right),$ then the open intervals $\left(\frac{1}{9}, \frac{2}{9}\right)$ and $\left(\frac{7}{9}, \frac{8}{9}\right),$ etc. After the
+$k^{t h}$ removal we have $2^{k}$ disjoint closed intervals of length $\left(\frac{1}{3}\right)^{k},$ and in the
+next stage we remove the middle third from each. The real numbers left
+after infinite removals make up the Cantor set.
+
+\bigskip
+Denote Cantor Set $C$ for the next problems.
+\bigskip
+
+
+\textbf{Exercise 5.a} Show the Cantor set is non-empty and bounded.
+\begin{proof}
+
+    We will show $0\in C$. $0\in[0,1]$ before the removals, and is always kept because $0<\left(\frac{1}{3}\right)^{k}$ for any $k$. So $0\in C$. Therefore, $C\neq\varnothing$. 
+
+    $C$ is bounded above by $1$ and below by $0$, because removals do not add new elements. The elements left in $C$ must be in $[0,1]$, so $C$ is bounded. 
+\end{proof}
+
+\textbf{Exercise 5.b} Show the Cantor set is closed.
+\begin{proof}
+    The complement of $C$ is a union of open intervals. (Before removal, the complement is $(-\infty, 0) \cup (1, \infty)$; in each removal the removed intervals are open by definition.) So according to 3, the complement of $C$ is open, and $C$ is closed. 
+\end{proof}
+
+\textbf{Exercise 5.c} Show the Cantor set is uncountable. \textit{Hint: Use the nested interval property as we did to show [0, 1] is uncountable.}
+\begin{proof}
+    Suppose $C$ is countable, then $C = \{c_1, c_2, ...\}$. We will find a point that is not in $C$. In the 1st removal, there are two parts left: $[0,\frac{1}{3}]$ and $[\frac{2}{3}, 1]$. $c_1$ is in either of them. Consider the one that $c_1$ is not in; name it $I_1$. During the 2nd removal, $I_1$ is partitioned into two, one of which $c_2$ is not in; name it $I_2$. Continue in this way. Eventually we have $I_{1} \supset I_{2} \supset I_{3} \supset \ldots \supset I_{n} \supset \ldots$. By the nested intervals theorem, $\bigcap_{n=1}^{\infty} I_{n} \neq \varnothing$. Thus there is an elment $x\in C$ that is not any of $c_i$. Contradition! Hence $C$ is uncountable. 
+\end{proof}
+
+
+
+
+\end{document}
+$\forall \varepsilon>0\left(\exists N \in \mathbb{N}\left(\forall n \in \mathbb{N}\left(n \geq N \Longrightarrow\left|x_{n}-x\right|<\varepsilon\right)\right)\right)$
